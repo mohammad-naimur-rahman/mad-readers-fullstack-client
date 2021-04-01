@@ -1,38 +1,55 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Josefin Sans", sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+p,
+a {
+  font-family: "Lato", sans-serif;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.side-nav {
+  min-height: calc(100vh - 60px);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.side-nav a {
+  margin: 5px 0;
+  padding: 20px;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.side-nav a:hover {
+  color: white;
+}
+.book {
+  width: 300px;
+  background-color: rgba(2, 2, 2, 0.041);
+}
+.bookImg {
+  width: 80%;
+  display: block;
+  margin: auto;
+}
+@media (max-width: 768px) {
+  .side-nav {
+    min-height: 70px;
+    flex-direction: row !important;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media (max-width: 500px) {
+  .book {
+    width: 250px;
   }
 }
